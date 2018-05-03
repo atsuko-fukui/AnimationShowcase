@@ -22,7 +22,8 @@
     <FrameLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:paddingTop="?android:actionBarSize"/>
 
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"

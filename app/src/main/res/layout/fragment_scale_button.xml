@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding">
+
+    <View
+        android:id="@+id/dummy1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/grey_rectangle" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/dummy4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dummy1"
+
+        android:layout_marginEnd="@dimen/padding"/>
+
+    <View
+        android:id="@+id/dummy2"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="@dimen/padding"
+        android:layout_marginTop="@dimen/padding"
+        android:background="@drawable/grey_rectangle"
+        app:layout_constraintEnd_toStartOf="@id/dummy3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dummy1" />
+
+    <View
+        android:id="@+id/dummy3"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="@dimen/padding"
+        android:background="@drawable/grey_rectangle"
+        app:layout_constraintEnd_toStartOf="@id/dummy4"
+        app:layout_constraintStart_toEndOf="@id/dummy2"
+        app:layout_constraintTop_toBottomOf="@id/dummy1" />
+
+    <View
+        android:id="@+id/dummy4"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="@dimen/padding"
+        android:layout_marginTop="@dimen/padding"
+        android:background="@drawable/grey_rectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/dummy3"
+        app:layout_constraintTop_toBottomOf="@id/dummy1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="@dimen/padding"
+        android:background="@drawable/grey_rectangle"
+        app:layout_constraintTop_toBottomOf="@id/dummy4" />
+
+
+</android.support.constraint.ConstraintLayout>
