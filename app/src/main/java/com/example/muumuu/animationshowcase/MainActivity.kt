@@ -7,7 +7,8 @@ import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
-import com.example.muumuu.animationshowcase.extension.addFragment
+import com.example.muumuu.animationshowcase.extension.replace
+import com.example.muumuu.animationshowcase.extension.show
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -16,10 +17,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        toolbar.title = "ToolbarTest"
+        show(Samples.values().first())
         toolbar.setTitleTextColor(ContextCompat.getColor(this, android.R.color.white))
-
-        supportFragmentManager.addFragment(R.id.container, ScaleButtonFragment())
 
         val toggle = ActionBarDrawerToggle(
                 this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
@@ -38,29 +37,19 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        // Handle navigation view item clicks here.
-        when (item.itemId) {
-            R.id.nav_camera -> {
-                // Handle the camera action
-            }
-            R.id.nav_gallery -> {
-
-            }
-            R.id.nav_slideshow -> {
-
-            }
-            R.id.nav_manage -> {
-
-            }
-            R.id.nav_share -> {
-
-            }
-            R.id.nav_send -> {
-
-            }
-        }
-
+        show(Samples.values().first { it.id == item.itemId })
         drawer_layout.closeDrawer(GravityCompat.START)
         return true
+    }
+
+    private fun show(sample: Samples) {
+        supportFragmentManager.run {
+            if (findFragmentByTag(sample.name) == null) {
+                show(R.id.container, sample.newFragment(), sample.name)
+            } else {
+                replace(R.id.container, findFragmentByTag(sample.name), sample.name)
+            }
+        }
+        toolbar.title = sample.name
     }
 }

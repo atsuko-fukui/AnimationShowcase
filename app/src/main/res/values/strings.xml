@@ -5,4 +5,11 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+
+    <!-- menu name -->
+    <string name="menu_scale_button">Scale Button</string>
+    <string name="menu_arc_transition">Arc Transition</string>
+
+    <string name="like">like</string>
+
 </resources>
