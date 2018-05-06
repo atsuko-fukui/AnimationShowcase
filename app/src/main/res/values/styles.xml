@@ -24,4 +24,10 @@
         <item name="spinBars">true</item>
         <item name="color">@android:color/white</item>
     </style>
+
+    <style name="CardTextStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
 </resources>

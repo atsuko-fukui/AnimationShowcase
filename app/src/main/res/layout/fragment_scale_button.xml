@@ -15,11 +15,11 @@
         android:id="@+id/fab"
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:layout_marginEnd="@dimen/padding"
         app:layout_constraintBottom_toTopOf="@+id/dummy4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dummy1"
 
-        android:layout_marginEnd="@dimen/padding"/>
+        app:layout_constraintTop_toBottomOf="@+id/dummy1" />
 
     <View
         android:id="@+id/dummy2"
@@ -60,5 +60,33 @@
         android:background="@drawable/grey_rectangle"
         app:layout_constraintTop_toBottomOf="@id/dummy4" />
 
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/mint"
+            android:padding="@dimen/padding">
+
+            <TextView
+                style="@style/CardTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/description_scale_button" />
+
+            <Button
+                android:id="@+id/viewCodeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginTop="@dimen/padding"
+                android:text="@string/view_code" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
 
 </android.support.constraint.ConstraintLayout>

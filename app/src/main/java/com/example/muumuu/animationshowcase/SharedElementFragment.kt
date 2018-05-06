@@ -2,6 +2,8 @@ package com.example.muumuu.animationshowcase
 
 import android.app.Activity
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.ActivityOptionsCompat
 import android.support.v4.app.Fragment
@@ -35,6 +37,10 @@ class SharedElementFragment : Fragment() {
                 SharedElementActivity.startIntent(context!!, position, opetions.toBundle())
             })
         }
+        viewCodeButton.setOnClickListener {
+            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(CodeSampleUrl.SHARED_ELEMENT.url)))
+        }
+
     }
 
     private class SharedElementAdapter(val context: Context,

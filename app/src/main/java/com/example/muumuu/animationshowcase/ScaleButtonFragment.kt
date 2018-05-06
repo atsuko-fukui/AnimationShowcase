@@ -2,8 +2,10 @@ package com.example.muumuu.animationshowcase
 
 import android.animation.ObjectAnimator
 import android.animation.PropertyValuesHolder
+import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Color
+import android.net.Uri
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
 import android.support.v4.app.Fragment
@@ -40,6 +42,9 @@ class ScaleButtonFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setUpFab(fab)
+        viewCodeButton.setOnClickListener {
+            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(CodeSampleUrl.SCALE_BUTTON.url)))
+        }
     }
 
     private fun setUpFab(fab: FloatingActionButton) {

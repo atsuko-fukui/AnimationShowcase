@@ -1,5 +1,7 @@
 package com.example.muumuu.animationshowcase
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.support.constraint.ConstraintLayout
 import android.support.transition.ArcMotion
@@ -20,6 +22,10 @@ class ArcTransitionFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setUpButton()
+        viewCodeButton.setOnClickListener {
+            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(CodeSampleUrl.ARC_TRANSITION.url)))
+        }
+
     }
 
     private fun setUpButton() {

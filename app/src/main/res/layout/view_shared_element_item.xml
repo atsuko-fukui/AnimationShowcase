@@ -8,5 +8,6 @@
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:foreground="?android:attr/selectableItemBackground"
         app:layout_constraintDimensionRatio="1:1"/>
 </android.support.constraint.ConstraintLayout>
