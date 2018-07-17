@@ -11,6 +11,9 @@ enum class Samples(val id: Int) {
     },
     ARC_TRANSITION(R.id.nav_arc_transition) {
         override fun newFragment() = ArcTransitionFragment()
+    },
+    STATE_LIST_ANIMATION(R.id.nav_state_list_animation) {
+        override fun newFragment() = StateListAnimFragment()
     };
 
     abstract fun newFragment(): Fragment
