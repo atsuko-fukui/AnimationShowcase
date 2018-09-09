@@ -41,7 +41,7 @@ class ReorderingFragment : Fragment() {
             recycler.adapter = ReorderingAdapter(activity!!)
         }
         viewCodeButton.setOnClickListener {
-            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(CodeSampleUrl.SHARED_ELEMENT.url)))
+            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(CodeSampleUrl.REORDERING_ANIMATION.url)))
         }
         fab.setOnClickListener {
             context?.let {
