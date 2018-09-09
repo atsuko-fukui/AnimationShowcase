@@ -31,10 +31,10 @@ class SharedElementFragment : Fragment() {
         context?.let {
             recycler.layoutManager = GridLayoutManager(context, 2)
             recycler.adapter = SharedElementAdapter(context!!, { position, view ->
-                val opetions = ActivityOptionsCompat.makeSceneTransitionAnimation(
+                val options = ActivityOptionsCompat.makeSceneTransitionAnimation(
                         activity as Activity, Pair(view, SharedElementActivity.IMAGE_TRANSITION_NAME)
                 )
-                SharedElementActivity.startIntent(context!!, position, opetions.toBundle())
+                SharedElementActivity.startIntent(context!!, position, options.toBundle())
             })
         }
         viewCodeButton.setOnClickListener {

@@ -16,4 +16,8 @@
     <item
         android:id="@+id/nav_state_list_animation"
         android:title="@string/menu_state_list_animation" />
+
+    <item
+        android:id="@+id/nav_reordering_animation"
+        android:title="@string/menu_reordering_animation" />
 </menu>

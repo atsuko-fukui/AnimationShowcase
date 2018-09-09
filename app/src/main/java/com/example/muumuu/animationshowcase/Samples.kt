@@ -14,6 +14,9 @@ enum class Samples(val id: Int) {
     },
     STATE_LIST_ANIMATION(R.id.nav_state_list_animation) {
         override fun newFragment() = StateListAnimFragment()
+    },
+    REORDERING(R.id.nav_reordering_animation) {
+        override fun newFragment() = ReorderingFragment()
     };
 
     abstract fun newFragment(): Fragment
