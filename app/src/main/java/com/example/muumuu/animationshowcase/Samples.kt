@@ -17,7 +17,11 @@ enum class Samples(val id: Int) {
     },
     REORDERING(R.id.nav_reordering_animation) {
         override fun newFragment() = ReorderingFragment()
+    },
+    SELECTABLE_ITEMS(R.id.nav_selectable_items) {
+        override fun newFragment() = SelectableItemFragment()
     };
+
 
     abstract fun newFragment(): Fragment
 }

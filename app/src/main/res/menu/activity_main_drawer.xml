@@ -20,4 +20,8 @@
     <item
         android:id="@+id/nav_reordering_animation"
         android:title="@string/menu_reordering_animation" />
+
+    <item
+        android:id="@+id/nav_selectable_items"
+        android:title="@string/menu_selectable_items" />
 </menu>
