@@ -1,5 +1,7 @@
 package com.example.muumuu.animationshowcase
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
@@ -19,5 +21,10 @@ class SelectableItemFragment : Fragment() {
         background_border.setOnClickListener {  }
         foreground_borderless.setOnClickListener {  }
         foreground_border.setOnClickListener {  }
+
+
+        viewCodeButton.setOnClickListener {
+            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(CodeSampleUrl.SELECTED_ITEMS.url)))
+        }
     }
 }
