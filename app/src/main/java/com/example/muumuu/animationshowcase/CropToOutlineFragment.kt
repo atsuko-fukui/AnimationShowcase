@@ -1,5 +1,7 @@
 package com.example.muumuu.animationshowcase
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
@@ -29,6 +31,10 @@ class CropToOutlineFragment : Fragment() {
                     .load(IMAGE_URL)
                     .apply(RequestOptions().centerCrop())
                     .into(image)
+        }
+
+        viewCodeButton.setOnClickListener {
+            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(CodeSampleUrl.CROP_TO_OUTLINE.url)))
         }
     }
 }
