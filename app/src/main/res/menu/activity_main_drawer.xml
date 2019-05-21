@@ -24,4 +24,8 @@
     <item
         android:id="@+id/nav_selectable_items"
         android:title="@string/menu_selectable_items" />
+
+    <item
+        android:id="@+id/nav_crop_to_outline"
+        android:title="@string/menu_crop_to_outline" />
 </menu>

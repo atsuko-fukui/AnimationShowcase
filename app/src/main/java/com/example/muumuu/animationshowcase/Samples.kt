@@ -20,8 +20,10 @@ enum class Samples(val id: Int) {
     },
     SELECTABLE_ITEMS(R.id.nav_selectable_items) {
         override fun newFragment() = SelectableItemFragment()
+    },
+    CROP_TO_OUTLINE(R.id.nav_crop_to_outline) {
+        override fun newFragment() = CropToOutlineFragment()
     };
-
 
     abstract fun newFragment(): Fragment
 }
