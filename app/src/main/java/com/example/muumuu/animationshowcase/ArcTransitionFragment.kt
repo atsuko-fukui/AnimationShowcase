@@ -3,11 +3,11 @@ package com.example.muumuu.animationshowcase
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.support.constraint.ConstraintLayout
-import android.support.transition.ArcMotion
-import android.support.transition.ChangeBounds
-import android.support.transition.TransitionManager
-import android.support.v4.app.Fragment
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.transition.ArcMotion
+import androidx.transition.ChangeBounds
+import androidx.transition.TransitionManager
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup

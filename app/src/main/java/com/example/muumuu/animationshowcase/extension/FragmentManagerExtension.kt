@@ -1,7 +1,7 @@
 package com.example.muumuu.animationshowcase.extension
 
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentManager
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 
 fun FragmentManager.show(id: Int, fragment: Fragment, tag: String) {
     beginTransaction()

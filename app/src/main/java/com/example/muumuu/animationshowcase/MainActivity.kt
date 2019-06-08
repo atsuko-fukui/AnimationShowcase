@@ -1,11 +1,11 @@
 package com.example.muumuu.animationshowcase
 
 import android.os.Bundle
-import android.support.design.widget.NavigationView
-import android.support.v4.content.ContextCompat
-import android.support.v4.view.GravityCompat
-import android.support.v7.app.ActionBarDrawerToggle
-import android.support.v7.app.AppCompatActivity
+import com.google.android.material.navigation.NavigationView
+import androidx.core.content.ContextCompat
+import androidx.core.view.GravityCompat
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
 import android.view.MenuItem
 import com.example.muumuu.animationshowcase.extension.replace
 import com.example.muumuu.animationshowcase.extension.show
@@ -44,10 +44,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     private fun show(sample: Samples) {
         supportFragmentManager.run {
-            if (findFragmentByTag(sample.name) == null) {
+            val fragment = findFragmentByTag(sample.name)
+            if (fragment == null) {
                 show(R.id.container, sample.newFragment(), sample.name)
             } else {
-                replace(R.id.container, findFragmentByTag(sample.name), sample.name)
+                replace(R.id.container, fragment, sample.name)
             }
         }
         toolbar.title = sample.name

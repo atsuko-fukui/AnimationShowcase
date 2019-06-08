@@ -1,6 +1,6 @@
 package com.example.muumuu.animationshowcase
 
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 
 enum class Samples(val id: Int) {
     SCALE_BUTTON(R.id.nav_scale_button) {
