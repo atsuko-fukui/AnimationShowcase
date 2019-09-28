@@ -18,6 +18,7 @@
     <string name="menu_reordering_animation">Reordering Animation</string>
     <string name="menu_selectable_items">Selectable Items</string>
     <string name="menu_crop_to_outline">Crop To Outline</string>
+    <string name="menu_flow">Flow</string>
 
     <!-- description -->
     <string name="description_scale_button">When touch the button, button size is animated</string>

@@ -30,4 +30,21 @@
         <item name="android:textColor">@android:color/black</item>
         <item name="android:lineSpacingExtra">4sp</item>
     </style>
+
+    <style name="FlowFlexBoxItemStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:padding">8dp</item>
+    </style>
+
+    <style name="FlowFlexBoxGridStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:gravity">center</item>
+    </style>
 </resources>

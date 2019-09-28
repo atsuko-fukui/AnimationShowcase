@@ -28,4 +28,9 @@
     <item
         android:id="@+id/nav_crop_to_outline"
         android:title="@string/menu_crop_to_outline" />
+
+    <item
+        android:id="@+id/nav_flow"
+        android:title="@string/menu_flow" />
+
 </menu>

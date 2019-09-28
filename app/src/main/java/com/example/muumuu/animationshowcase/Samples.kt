@@ -23,6 +23,9 @@ enum class Samples(val id: Int) {
     },
     CROP_TO_OUTLINE(R.id.nav_crop_to_outline) {
         override fun newFragment() = CropToOutlineFragment()
+    },
+    FLOW(R.id.nav_flow) {
+        override fun newFragment() = FlowFragment()
     };
 
     abstract fun newFragment(): Fragment
