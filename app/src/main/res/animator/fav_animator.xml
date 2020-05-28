@@ -12,7 +12,7 @@
                 android:valueTo="1.5" />
             <objectAnimator
                 android:duration="200"
-                android:propertyName="transitionZ"
+                android:propertyName="translationZ"
                 android:valueTo="10dp" />
         </set>
     </item>
@@ -28,7 +28,7 @@
                 android:valueTo="1" />
             <objectAnimator
                 android:duration="200"
-                android:propertyName="transitionZ"
+                android:propertyName="translationZ"
                 android:valueTo="0dp" />
         </set>
     </item>
